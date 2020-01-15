@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Set timezone
+if [ ! -z "${TZ}" ]; then
+  ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+fi
+
+# Remove boot service
+rm -rf /etc/service/boot

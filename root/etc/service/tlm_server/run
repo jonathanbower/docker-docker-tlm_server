@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Start tlm_server
+if ! pid=$(pgrep tlm_server);
+then
+  service start_tlmserver start
+fi
